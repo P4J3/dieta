@@ -11,7 +11,7 @@ def valida_data(sheet, celula, data):
     numero = int(sheet[celula].coordinate[1:]) # Recebe a parte númerica do endereço da célula.
     letra = sheet[celula].coordinate[0] # Recebe a parte literal do endereço da célula.
     indice = letra + str(numero)
-    data_config = datetime.strptime(data,'%d/%m/%Y')
+    dia = data
 
     '''
         Diminui a parte numérica da célula até chegar a data para fazer verificação.
@@ -24,7 +24,7 @@ def valida_data(sheet, celula, data):
             numero-=1
             indice = letra + str(numero)
         else:
-            if k.value.day == data_config.day:
+            if k.value.day == dia:
                 return True
             return False
 

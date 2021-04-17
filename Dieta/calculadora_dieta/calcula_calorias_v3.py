@@ -1,5 +1,6 @@
 from time import sleep
-from grava_macros_v2 import salva_tudo
+
+from calculadora_dieta.grava_macros_v2 import salva_tudo
 
 lista_alimentos = {
 		'arroz_cozido':{'id': 1, 'nome': 'Arroz Cozido', 'calorias': 130, 'proteina': 2.5, 'carboidratos':28.18},
